@@ -117,16 +117,15 @@ h2 span {
     padding: 20px 0;
     max-width: 398px;
     width: 100%;
-    height: 58px;
     background: #e6fb04;
     margin: auto;
     margin-top: 46px;
     display: block;
+    border: none;
+    color: #000;
+    text-align: center;
 }
 
-.btn-primary a {
-    color: #000;
-}
 
 
 
