@@ -56,26 +56,3 @@ btns.forEach((btn, index) => {
   });
 });
 
-
-
-
-
-
-const openBtn = document.getElementById('openReviewBtn');
-const modal = document.getElementById('modalReview');
-const closeBtn = document.getElementById('modalClose');
-
-openBtn.addEventListener('click', () => {
-  modal.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
-
-// Чтобы клик вне модалки тоже закрывал её
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-  }
-});

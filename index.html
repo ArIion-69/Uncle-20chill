@@ -44,18 +44,7 @@
         const whiteText = document.querySelector(".ticker--white .ticker__text");
 
         const pagePath = window.location.pathname;
-
-        let textYellow = "МИНУС МИНУС МИНУС ";
-        let textWhite = "МИНУС МИНУС МИНУС ";
-
-        if (pagePath.includes("profile")) {
-            textYellow = "Профиль пользователя – ";
-            textWhite = "Контакты – Telegram – Инстаграм – ";
-        } else if (pagePath.includes("category")) {
-            textYellow = "Категория: Юрист – Финансы – IT – ";
-            textWhite = "Выбор профессии – Будущее – ";
-        }
-
+        
         // Повторим текст 2 раза — чтобы хватило на бесшовность
         yellowText.textContent = (textYellow + " ").repeat(20);
         whiteText.textContent = (textWhite + " ").repeat(20);
