@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/DelaGothicOne-Regular.ttf");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dela Gothic One";
+    src: url("../fonts/Montserrat-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-VariableFont.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+}

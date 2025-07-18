@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section class="form-section">
+            <!-- Шаг 1 -->
+            <h2 id="form-title" class="form-title">Заполни инфу о себе</h2>
+            <form class="form form-step active" id="step-1">
+                <label class="form-label">Как тебя зовут?</label>
+                <input type="text" placeholder="Имя" class="form-input" />
+                <input type="text" placeholder="Фамилия" class="form-input" />
+                <input type="text" placeholder="Отчество" class="form-input" />
+
+                <button type="button" class="btn-primary btn-next" onclick="goToStep(2)">Дальше</button>
+            </form>
+            <!-- Шаг 2 -->
+            <form class="form form-step" id="step-2">
+                <label class="form-label">Расскажи что-то интересное о себе</label>
+                <textarea class="form-textarea" placeholder="Интересный факт обо мне это ..."></textarea>
+
+                <label class="form-label">Когда др?</label>
+                <div class="form-birthday">
+                    <input type="text" maxlength="2" placeholder="ДД" class="form-date" />
+                    <input type="text" maxlength="2" placeholder="ММ" class="form-date" />
+                    <input type="text" maxlength="4" placeholder="ГГГГ" class="form-date" />
+                </div>
+
+                <button type="button" class="btn-primary btn-next" onclick="goToStep(3)">Далее</button>
+            </form>
+            <!-- Шаг 3 -->
+            <form class="form form-step" id="step-3">
+
+                <label class="form-label">Твоя сфера</label>
+                <select class="form-select">
+                    <option disabled selected>Выбери сферу</option>
+                    <option>Производство и промышленность</option>
+                    <option>Логистика и транспорт</option>
+                    <option>Социальная работа</option>
+                    <option>IT</option>
+                </select>
+
+                <label class="form-label">Твоя организация</label>
+                <input type="text" class="form-input" placeholder="Название компании" />
+
+                <label class="form-label">Кем ты работаешь?</label>
+                <input type="text" class="form-input" placeholder="Профессор" />
+
+                <label class="form-label">Твои услуги</label>
+                <input type="text" class="form-input" placeholder="Название услуги" />
+                <input type="text" class="form-input" placeholder="Доп услуга" />
+
+                <label class="form-label">Прочая деятельность</label>
+                <input type="text" class="form-input" placeholder="Может ты гадаешь?" />
+
+                <button type="button" class="btn-primary btn-next" onclick="goToStep(4)">Далее</button>
+            </form>
+            <!-- Шаг 4 -->
+            <form class="form form-step" id="step-4">
+
+                <label class="form-label">Выбери свое хобби</label>
+                <div class="hobby-grid">
+                    <button type="button" class="hobby-btn">🎣 Рыбалка</button>
+                    <button type="button" class="hobby-btn">🎵 Музыка</button>
+                    <button type="button" class="hobby-btn">🧘 Йога</button>
+                    <button type="button" class="hobby-btn">🍺 Пить</button>
+                    <button type="button" class="hobby-btn">🎮 Играть</button>
+                    <button type="button" class="hobby-btn">⚽️ Футбол</button>
+                    <button type="button" class="hobby-btn">📺 Телик</button>
+                    <button type="button" class="hobby-btn">🏐 Волейбол</button>
+                    <button type="button" class="hobby-btn">🚗 Машина</button>
+                    <button type="button" class="hobby-btn">😎 Отдыхать</button>
+                    <button type="button" class="hobby-btn">🪐 Космос</button>
+                    <button type="button" class="hobby-btn">🚲 Велик</button>
+                    <button type="button" class="hobby-btn">✈️ Путешествовать</button>
+                    <button type="button" class="hobby-btn">🐾 Собаки</button>
+                    <button type="button" class="hobby-btn">📚 Книги</button>
+                    <button type="button" class="hobby-btn">🔥 Печь</button>
+                    <button type="button" class="hobby-btn">🍳 Готовить</button>
+                    <button type="button" class="hobby-btn">🎰 Азартные игры</button>
+                    <button type="button" class="hobby-btn">⛺️ Поход</button>
+                </div>
+
+                <button type="button" class="btn-primary btn-next" onclick="goToStep(5)">Далее</button>
+            </form>
+            <!-- шаг 5 -->
+            <form class="form form-step" id="step-5">
+
+                <label class="form-label">Твой девиз по жизни</label>
+                <textarea class="form-textarea" placeholder="Может что-то про волка...?"></textarea>
+
+                <label class="form-label">Когда ты чаще всего свободен?</label>
+
+                <div class="time-group">
+                    <div class="time-label">В будние дни</div>
+                    <div class="time-row">
+                        <span>с</span>
+                        <input type="time" class="form-time" value="20:00">
+                        <span>до</span>
+                        <input type="time" class="form-time" value="00:00">
+                    </div>
+                </div>
+
+                <div class="time-group">
+                    <div class="time-label">В выходные</div>
+                    <div class="time-row">
+                        <span>с</span>
+                        <input type="time" class="form-time" value="20:00">
+                        <span>до</span>
+                        <input type="time" class="form-time" value="00:00">
+                    </div>
+                </div>
+
+                <button type="button" class="btn-primary btn-next" onclick="goToStep(6)">Далее</button>
+            </form>
+            <!-- шаг 6 -->
+            <form class="form form-step" id="step-6">
+                <label class="form-label">Инстаграм</label>
+                <div class="form-icon-input">
+                    <span class="icon">📷</span>
+                    <input type="text" placeholder="@Username" class="form-input --input-icon" />
+                </div>
+
+                <label class="form-label">Фейсбук</label>
+                <div class="form-icon-input">
+                    <span class="icon">📘</span>
+                    <input type="text" placeholder="@Username" class="form-input --input-icon" />
+                </div>
+
+                <label class="form-label">Почта</label>
+                <div class="form-icon-input">
+                    <span class="icon">@</span>
+                    <input type="email" placeholder="@gmail" class="form-input --input-icon" />
+                </div>
+
+                <label class="form-label">Телефон</label>
+                <div class="form-icon-input">
+                    <span class="icon">📞</span>
+                    <input type="tel" placeholder="+998 99 999-99-99" class="form-input" />
+                </div>
+
+                <button type="button" class="btn-primary btn-next" onclick="goToStep(7)">Далее</button>
+            </form>
+            <!-- 7 -->
+            <form class="form form-step" id="step-7">
+
+                <label class="upload-avatar" for="avatar-input">
+                    <span class="upload-text">Нажми на меня</span>
+                    <input type="file" id="avatar-input" accept="image/*" hidden onchange="previewAvatar(event)" />
+                    <img id="avatar-preview" class="avatar-preview" src="" alt="" style="display: none;">
+                </label>
+
+                <button type="button" class="btn-primary btn-next">Сохранить</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
