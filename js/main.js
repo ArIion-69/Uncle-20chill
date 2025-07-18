@@ -79,5 +79,3 @@ window.addEventListener('click', (e) => {
     modal.classList.remove('active');
   }
 });
-
-

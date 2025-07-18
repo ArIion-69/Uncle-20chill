@@ -26,44 +26,58 @@ main {
 }
 
 .ticker {
-    color: black;
-    font-weight: bold;
-    overflow: hidden;
-    position: relative;
-    line-height: 32px;
-    height: 83px;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.ticker::before {
-    content: "МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС ";
-    position: absolute;
-    animation: ticker 10s linear infinite;
-    background: #e6fb04;
-    transform: rotate(-2deg);
-    display: inline-block;
-    height: 32px;
-
+.ticker__line {
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: black;
+  will-change: transform;
+  overflow: hidden;
 }
 
-.ticker::after {
-    content: "МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС МИНУС ";
-    position: absolute;
-    animation: ticker 10s linear infinite;
-    background: #fff;
-    transform: rotate(-1deg);
-    height: 32px;
-    bottom: 19px;
+.ticker--yellow {
+  background: #e6fb04;
+  transform: rotate(2deg);
+  top: 26px;
+  height: 32px;
 }
 
-@keyframes ticker {
-    0% {
-        left: 0%;
-    }
-
-    100% {
-        left: -100%;
-    }
+.ticker--white {
+  background: #fff;
+  transform: rotate(-2deg);
+  top: 61px;
+  height: 32px;
 }
+
+.ticker__text {
+  white-space: nowrap;
+  animation: tickerMove 10s linear infinite;
+}
+
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.padding-0{
+    padding-top: 0 !important;
+}
+
 
 .rejection-content {
     padding-left: 26px;
@@ -71,7 +85,7 @@ main {
 }
 
 .rejection-image img {
-    margin: 149px auto 113px auto;
+    margin: 73px auto 142px auto;
     display: block;
 }
 
@@ -100,8 +114,9 @@ h2 span {
 
 .btn-primary {
     border-radius: 34px;
-    padding: 20px 88px;
-    width: 398px;
+    padding: 20px 0;
+    max-width: 398px;
+    width: 100%;
     height: 58px;
     background: #e6fb04;
     margin: auto;
