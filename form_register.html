@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -72,26 +72,84 @@
 
                 <label class="form-label">Выбери свое хобби</label>
                 <div class="hobby-grid">
-                    <button type="button" class="hobby-btn">🎣 Рыбалка</button>
-                    <button type="button" class="hobby-btn">🎵 Музыка</button>
-                    <button type="button" class="hobby-btn">🧘 Йога</button>
-                    <button type="button" class="hobby-btn">🍺 Пить</button>
-                    <button type="button" class="hobby-btn">🎮 Играть</button>
-                    <button type="button" class="hobby-btn">⚽️ Футбол</button>
-                    <button type="button" class="hobby-btn">📺 Телик</button>
-                    <button type="button" class="hobby-btn">🏐 Волейбол</button>
-                    <button type="button" class="hobby-btn">🚗 Машина</button>
-                    <button type="button" class="hobby-btn">😎 Отдыхать</button>
-                    <button type="button" class="hobby-btn">🪐 Космос</button>
-                    <button type="button" class="hobby-btn">🚲 Велик</button>
-                    <button type="button" class="hobby-btn">✈️ Путешествовать</button>
-                    <button type="button" class="hobby-btn">🐾 Собаки</button>
-                    <button type="button" class="hobby-btn">📚 Книги</button>
-                    <button type="button" class="hobby-btn">🔥 Печь</button>
-                    <button type="button" class="hobby-btn">🍳 Готовить</button>
-                    <button type="button" class="hobby-btn">🎰 Азартные игры</button>
-                    <button type="button" class="hobby-btn">⛺️ Поход</button>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Рыбалка" hidden>
+                        <span class="hobby-visual">🎣 Рыбалка</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Музыка" hidden>
+                        <span class="hobby-visual">🎵 Музыка</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Йога" hidden>
+                        <span class="hobby-visual">🧘 Йога</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Пить" hidden>
+                        <span class="hobby-visual">🍺 Пить</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Играть" hidden>
+                        <span class="hobby-visual">🎮 Играть</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Футбол" hidden>
+                        <span class="hobby-visual">⚽️ Футбол</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Телик" hidden>
+                        <span class="hobby-visual">📺 Телик</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Волейбол" hidden>
+                        <span class="hobby-visual">🏐 Волейбол</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Машина" hidden>
+                        <span class="hobby-visual">🚗 Машина</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Отдыхать" hidden>
+                        <span class="hobby-visual">😎 Отдыхать</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Космос" hidden>
+                        <span class="hobby-visual">🪐 Космос</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Велик" hidden>
+                        <span class="hobby-visual">🚲 Велик</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Путешествовать" hidden>
+                        <span class="hobby-visual">✈️ Путешествовать</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Собаки" hidden>
+                        <span class="hobby-visual">🐾 Собаки</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Книги" hidden>
+                        <span class="hobby-visual">📚 Книги</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Печь" hidden>
+                        <span class="hobby-visual">🔥 Печь</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Готовить" hidden>
+                        <span class="hobby-visual">🍳 Готовить</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Азартные игры" hidden>
+                        <span class="hobby-visual">🎰 Азартные игры</span>
+                    </label>
+                    <label class="hobby-item">
+                        <input type="checkbox" name="hobby[]" value="Поход" hidden>
+                        <span class="hobby-visual">⛺️ Поход</span>
+                    </label>
                 </div>
+
 
                 <button type="button" class="btn-primary btn-next" onclick="goToStep(5)">Далее</button>
             </form>
@@ -157,15 +215,37 @@
             <form class="form form-step" id="step-7">
 
                 <label class="upload-avatar" for="avatar-input">
-                    <span class="upload-text">Нажми на меня</span>
+                    <span class="upload-text" id="upload-text">Нажми на меня</span>
                     <input type="file" id="avatar-input" accept="image/*" hidden onchange="previewAvatar(event)" />
-                    <img id="avatar-preview" class="avatar-preview" src="" alt="" style="display: none;">
+                    <img id="avatar-preview" class="avatar-preview" src="" alt=""
+                        style="display: none; max-width: 250px;">
                 </label>
 
                 <a href="profile.html"> <button type="button" class="btn-primary btn-next">Сохранить</button></a>
             </form>
         </section>
     </main>
+
+    <script>
+        function previewAvatar(event) {
+            const input = event.target;
+            const preview = document.getElementById('avatar-preview');
+            const text = document.getElementById('upload-text');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    text.style.display = 'none'; // ⬅️ прячем надпись
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
 
     <script src="js/main.js"></script>
 </body>
