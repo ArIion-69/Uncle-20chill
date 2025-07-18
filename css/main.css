@@ -26,55 +26,56 @@ main {
 }
 
 .ticker {
-  position: relative;
-  height: 100px;
-  overflow: hidden;
-  z-index: 1;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .ticker__line {
-  position: absolute;
-  width: 100%;
-  white-space: nowrap;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 32px;
-  color: black;
-  will-change: transform;
-  overflow: hidden;
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    color: black;
+    will-change: transform;
+    overflow: hidden;
 }
 
 .ticker--yellow {
-  background: #e6fb04;
-  transform: rotate(2deg);
-  top: 26px;
-  height: 32px;
+    background: #e6fb04;
+    transform: rotate(2deg);
+    top: 26px;
+    height: 32px;
 }
 
 .ticker--white {
-  background: #fff;
-  transform: rotate(-2deg);
-  top: 61px;
-  height: 32px;
+    background: #fff;
+    transform: rotate(-2deg);
+    top: 61px;
+    height: 32px;
 }
 
 .ticker__text {
-  white-space: nowrap;
-  animation: tickerMove 10s linear infinite;
+    white-space: nowrap;
+    animation: tickerMove 10s linear infinite;
 }
 
 @keyframes tickerMove {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 
 
-.padding-0{
+.padding-0 {
     padding-top: 0 !important;
 }
 
@@ -124,8 +125,13 @@ h2 span {
     border: none;
     color: #000;
     text-align: center;
+    transition: 0.3s ease-in-out;
 }
 
+
+.btn-primary:hover {
+    background: #c7d715;
+}
 
 
 
@@ -249,9 +255,17 @@ h2 span {
     transition: 0.2s ease;
 }
 
+.hobby-btn:hover {
+    border: 1px solid rgb(219, 210, 210);
+}
+
 .hobby-btn.active {
     background-color: white;
     color: black;
+}
+
+.hobby-btn.active:hover {
+    background-color: rgb(205, 196, 196);
 }
 
 .hobby-btn {
@@ -413,12 +427,39 @@ header {
 .hero {
     border-radius: 39px;
     padding: 26px 16px;
-    background: linear-gradient(328deg, #ff0 0%, rgba(106, 132, 0, 0.62) 10.86%, #98ad44 61.2%, #9db500 100%);
+    background: linear-gradient(328deg, #ff0 0%, rgba(120, 149, 6, 0.62) 10.86%, #98ad44 61.2%, #9db500 100%);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
     align-items: center;
     text-align: center;
     margin: 0 16px;
     margin-bottom: 32px;
+    transition: 0.5s ease-in-out;
+
 }
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 25%;
+    }
+
+    25% {
+        background-position: 25% 50%;
+    }
+
+    50% {
+        background-position: 50% 75%;
+    }
+
+    75% {
+        background-position: 75% 10%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .hero-title {
     margin: 16px 0 12px 0;
@@ -447,6 +488,12 @@ header {
     stroke-width: 2px;
     stroke: #fff;
     margin: 0 auto;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hero img:hover {
+    scale: 1.3;
 }
 
 .hero span {
@@ -520,6 +567,10 @@ header {
     z-index: 1;
     transition: transform 0.4s ease-in-out;
     max-height: 58px;
+}
+
+.content__tap-slider:hover {
+    background: #b4b41c !important;
 }
 
 /* Цвет текста активной кнопки */
@@ -623,7 +674,12 @@ header {
     padding: 15px 40px;
     max-width: 187px;
     background: #ffff;
+    transition: 0.3s ease-in-out;
 
+}
+
+.footer__content-btn:hover {
+    background: #c1bfbf;
 }
 
 .footer__content-btn span {
@@ -639,6 +695,10 @@ header {
 
 .footer__content-btn.active {
     background: #e6fb04;
+}
+
+.footer__content-btn:hover.active {
+    background: #d3e325;
 }
 
 /* profile end */
@@ -782,6 +842,12 @@ header {
     max-width: 191px;
     width: 100%;
     padding: 24px 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.category__gap li:hover {
+    background: rgba(224, 224, 224, 0.97);
 }
 
 .category__gap li a {
@@ -886,6 +952,13 @@ header {
 
 .category__guest-item {
     margin-bottom: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.category__guest-item:hover {
+    padding: 10px;
+    border: 2px #d7d5d5 solid;
+    border-radius: 34px;
 }
 
 
@@ -984,7 +1057,7 @@ header {
 }
 
 .hero-btn {
-
+    cursor: pointer;
     border-radius: 34px;
     padding: 20px 0;
     width: 366px;
@@ -997,6 +1070,11 @@ header {
     text-align: center;
     color: #fff;
     border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: #373737;
 }
 
 /*category-iner end */
