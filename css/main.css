@@ -6,6 +6,14 @@
     text-decoration: none;
 }
 
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* или чёрный, если на чёрном фоне ничего не видно */
+}
+
+
 body {
     background: #000;
 }
@@ -153,7 +161,7 @@ h2 span {
 
 .form-section {
     margin-top: 66px;
-    padding: 0 25px;
+    padding: 0 16px;
 }
 
 .form-title {
@@ -205,7 +213,6 @@ h2 span {
     border: 1px solid #fffffc;
     border-radius: 34px;
     padding: 20px 24px;
-    max-width: 398px;
     height: 143px;
     background: rgba(247, 247, 247, 0.05);
     color: #ffff;
@@ -214,9 +221,9 @@ h2 span {
 
 .form-birthday {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
-    /* 3 колонки */
+    grid-template-columns: 114px 114px 141px;
     gap: 14px;
+    width: 100%;
 }
 
 .form-date {
@@ -224,12 +231,13 @@ h2 span {
     color: #ffff;
     border: 1px solid #fffffc;
     border-radius: 34px;
-    padding: 20px 24px;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .form-select {
     width: 100%;
-    padding: 14px 20px;
+    padding:20px 24px;
     border-radius: 999px;
     border: 1px solid #fff;
     background-color: #111;
@@ -247,6 +255,18 @@ h2 span {
     gap: 12px;
     flex-wrap: wrap;
     margin-top: 20px;
+}
+
+.hobby-btn {
+    border-radius: 30px;
+    padding: 12px 14px;
+    background: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 115%;
+    text-align: center;
+    color: #000;
 }
 
 .hobby-item {
@@ -317,9 +337,8 @@ h2 span {
     color: #ffff;
     border: 1px solid #fffffc;
     border-radius: 34px;
-    padding: 20px 0;
+    padding: 25px 0;
     height: 20px;
-    max-width: 143px;
     width: 100%;
 }
 
@@ -864,7 +883,6 @@ header {
     border-radius: 46px;
     background: rgba(255, 255, 255, 0.97);
     display: block;
-    max-width: 191px;
     width: 100%;
     padding: 24px 0;
     transition: 0.3s ease-in-out;

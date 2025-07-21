@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link  href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +30,7 @@
                 <div class="rejection-image">
                     <img src="img/sticker.png" alt="Огорчённое лицо">
                 </div>
-                <h2>Заявка <span class="highlight">принята</span></h2>
+                <h1>Заявка <span class="highlight">принята</span></h1>
                 <p class="reason">Добро пожаловать, брат! Ты теперь свой!</p>
                 <a aria-label="Перейти в профиль" class="btn-primary" href="profile.html">Готова</a>
             </div>
@@ -42,7 +44,7 @@
         const whiteText = document.querySelector(".ticker--white .ticker__text");
 
         const pagePath = window.location.pathname;
-        
+
         // Повторим текст 2 раза — чтобы хватило на бесшовность
         yellowText.textContent = (textYellow + " ").repeat(20);
         whiteText.textContent = (textWhite + " ").repeat(20);
