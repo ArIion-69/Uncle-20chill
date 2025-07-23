@@ -1,16 +1,8 @@
 @import "fonts.css";
-
 * {
     list-style: 0;
     margin: 0;
     text-decoration: none;
-}
-
-
-.icon {
-  width: 24px;
-  height: 24px;
-  fill: currentColor; /* или чёрный, если на чёрном фоне ничего не видно */
 }
 
 
@@ -22,6 +14,17 @@ body {
     --font-family: "Montserrat", sans-serif;
     --second-family: "Dela Gothic One", sans-serif;
     --font3: "Inter", sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    fill: currentColor;
 }
 
 main {
@@ -160,8 +163,7 @@ h2 span {
 }
 
 .form-section {
-    margin-top: 66px;
-    padding: 0 16px;
+    padding: 66px 16px;
 }
 
 .form-title {
@@ -237,7 +239,7 @@ h2 span {
 
 .form-select {
     width: 100%;
-    padding:20px 24px;
+    padding: 20px 24px;
     border-radius: 999px;
     border: 1px solid #fff;
     background-color: #111;
@@ -266,8 +268,14 @@ h2 span {
     font-size: 16px;
     line-height: 115%;
     text-align: center;
+    display: flex;
+    align-items:center;
     color: #000;
 }
+
+.hobby-btn .icon{
+    fill: currentColor !important; 
+} 
 
 .hobby-item {
     position: relative;
@@ -282,18 +290,20 @@ h2 span {
 
 .hobby-visual {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
-    padding: 8px 14px;
+    padding: 15px 14px;
     border: 2px solid #fff;
     border-radius: 999px;
     background-color: transparent;
     color: #fff;
-    font-weight: 500;
-    font-size: 16px;
     transition: all 0.2s ease-in-out;
     white-space: nowrap;
     cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 115%;
+    align-items:center;
 }
 
 /* Состояние при активном чекбоксе */
@@ -363,11 +373,6 @@ input[type="time"] {
 input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
-}
-
-/* Для Firefox */
-input[type="time"] {
-    -moz-appearance: textfield;
 }
 
 
@@ -440,7 +445,7 @@ input[type="time"] {
 }
 
 .btn-next {
-    position: absolute;
+    position: fixed;
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
@@ -691,6 +696,8 @@ header {
     color: #fff;
     text-align: start;
     background: rgba(242, 242, 242, 0.15) !important;
+    display: flex;
+    align-items: center;
 
 }
 

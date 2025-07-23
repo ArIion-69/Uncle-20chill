@@ -28,15 +28,6 @@ function goToStep(stepNumber) {
     }
 }
 
-// При загрузке страницы активируем шаг 1 (если вдруг нет)
-document.addEventListener('DOMContentLoaded', () => {
-    goToStep(1);
-});
-document.querySelectorAll('.hobby-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        btn.classList.toggle('active'); // переключает выбранность
-    });
-});
 
 const btns = document.querySelectorAll('.content__tap-btn');
 const slider = document.querySelector('.content__tap-slider');
