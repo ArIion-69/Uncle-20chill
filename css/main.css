@@ -1,4 +1,5 @@
 @import "fonts.css";
+
 * {
     list-style: 0;
     margin: 0;
@@ -6,9 +7,7 @@
 }
 
 
-body {
-    background: #000;
-}
+
 
 :root {
     --font-family: "Montserrat", sans-serif;
@@ -16,15 +15,20 @@ body {
     --font3: "Inter", sans-serif;
 }
 
-.hidden{
+body {
+    background: #000;
+    font-family: var(--font-family);
+}
+
+.hidden {
     display: none;
 }
 
-.icon{
+.icon {
     width: 24px;
     height: 24px;
     margin-right: 4px;
-    fill: currentColor;
+
 }
 
 main {
@@ -207,8 +211,12 @@ h2 span {
     border: 1px solid #fffffc;
     border-radius: 34px;
     background: rgba(247, 247, 247, 0.05);
-    color: #ffff;
     padding: 20px 24px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 115%;
+    color: #e1e1e1;
 }
 
 .form-textarea {
@@ -230,12 +238,23 @@ h2 span {
 
 .form-date {
     background: rgba(247, 247, 247, 0.05);
-    color: #ffff;
     border: 1px solid #fffffc;
     border-radius: 34px;
     padding: 20px 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 95%;
     text-align: center;
+    color: #fff;
 }
+
+.form-date::placeholder {
+    color: white;
+    opacity: 1;
+    /* важно для некоторых браузеров */
+}
+
 
 .form-select {
     width: 100%;
@@ -243,13 +262,16 @@ h2 span {
     border-radius: 999px;
     border: 1px solid #fff;
     background-color: #111;
-    color: white;
-    font-size: 14px;
     appearance: none;
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 16px center;
     background-size: 20px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 115%;
+    color: #e1e1e1;
 }
 
 .hobby-grid {
@@ -269,13 +291,13 @@ h2 span {
     line-height: 115%;
     text-align: center;
     display: flex;
-    align-items:center;
+    align-items: center;
     color: #000;
 }
 
-.hobby-btn .icon{
-    fill: currentColor !important; 
-} 
+.hobby-btn .icon {
+    fill: currentColor !important;
+}
 
 .hobby-item {
     position: relative;
@@ -303,7 +325,7 @@ h2 span {
     font-weight: 500;
     font-size: 16px;
     line-height: 115%;
-    align-items:center;
+    align-items: center;
 }
 
 /* Состояние при активном чекбоксе */
@@ -350,20 +372,18 @@ h2 span {
     padding: 25px 0;
     height: 20px;
     width: 100%;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 95%;
 }
 
 input[type="time"] {
     color: white;
-    /* Цвет текста (value) */
     font-size: 16px;
-    /* Размер */
     font-weight: bold;
-    /* Жирность */
     background: rgba(247, 247, 247, 0.05);
-    /* Отступы */
-    /* Скругление */
     border-radius: 34px;
-    /* Обводка */
     border: 1px solid #fffffc;
     padding: 20px 24px;
     text-align: center;
@@ -1220,21 +1240,19 @@ header {
 .modal-review__textarea {
     border: 1px solid #888;
     border-radius: 34px;
-    padding: 12px 0;
-    padding-left: 24px;
     width: 90%;
+    padding: 15px 24px;
     background: #f2f2f2;
-
-
+    text-align: start;
 }
 
 .modal-review__textarea::placeholder {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
-    text-align: start;
-
+    display: inline-block;
     color: #888;
+    line-height: 115%;
 }
 
 .modal-review__submit {
@@ -1243,14 +1261,18 @@ header {
     background: #e6fb04;
     border: none;
     padding: 14px;
-    font-weight: bold;
     border-radius: 999px;
-    font-size: 14px;
     cursor: pointer;
     position: absolute;
     bottom: 16px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 115%;
+    text-align: center;
+    color: #000;
 }
 
 
